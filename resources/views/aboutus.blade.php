@@ -25,7 +25,7 @@
 
         @media (min-width: 768px) {
         .container {
-            max-width: 810px;
+            max-width: 800px;
         }
         }
 
