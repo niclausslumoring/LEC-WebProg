@@ -100,9 +100,9 @@
             <div class="buttons-inline">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color: black">Manage</a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url('/insert-genre') }}">Manage Genres</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/insert-genre') }}">Manage Types</a></li>
                         <li><a class="dropdown-item" href="{{ url('/manage-user') }}">Manage Users</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/manage-book') }}">Manage Books</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/manage-book') }}">Manage Products</a></li>
                         </ul>
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color: black; text-decoration: none">Hello, {{ $user->fullname}}</a>
                         <ul class="dropdown-menu">

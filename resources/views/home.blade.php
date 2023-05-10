@@ -81,8 +81,8 @@
                     <div class="grid-item">
                         <img class="" src="{{\Illuminate\Support\Facades\Storage::url($b->cover)}}" alt="" style="width: 13rem; height: 15rem;">
                         <h6>{{ $b->title }}</h4>
-                            <p>Author: {{ $b->author }}</p>
-                            <p>Price: {{ $b->price }}</p>
+                            <p>{{ $b->author }}</p>
+                            <p>{{ $b->price }}</p>
                         <div class="grid-item-info">
                             
                             <a href="/book-detail/{{ $b->id }}" class="btn btn-outline-success">View Details</a>

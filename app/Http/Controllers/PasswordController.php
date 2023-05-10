@@ -7,6 +7,7 @@ use App\Rules\CheckOldPassword;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PasswordController extends Controller
 {
@@ -25,6 +26,7 @@ class PasswordController extends Controller
             'new_confirm_pass'=>'same:new_pass|required',
         ]);
         User::find(auth()->user()->id)->update(['password'=>Hash::make($request->new_pass)]);
+        Alert::success('Password', 'has changed');
         return redirect()->back();
     }
 }

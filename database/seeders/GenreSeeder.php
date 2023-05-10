@@ -26,7 +26,10 @@ class GenreSeeder extends Seeder
             ['name'=>'Science Fiction'],
             ['name'=>'Young-adult'],
             ['name'=>'Novel'],
-            ['name'=>'Poetry']
+            ['name'=>'Poetry'],
+            ['name'=>'Pen'],
+            ['name'=>'Pencil'],
+            ['name'=>'Eraser'],
         ]);
     }
 }

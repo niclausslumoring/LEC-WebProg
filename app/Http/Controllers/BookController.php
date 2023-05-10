@@ -8,6 +8,7 @@ use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
@@ -110,6 +111,12 @@ class BookController extends Controller
         return view('detail',compact('book', 'genres'));
     }
 
+    public function showBookEditDetail($id){
+        $book = Book::find($id);
+        $genres = Genre::all();
+        return view('edit_cart',compact('book', 'genres'));
+    }
+
     public function deleteBook($id){
         $book = Book::find($id);
         $book->delete();
@@ -125,7 +132,6 @@ class BookController extends Controller
         $cart = session()->get('cart', []);
         $quantity = $request->quantity;
     
-        // if book already exists in cart, update quantity
         if (isset($cart[$id])) {
             $quantity += $cart[$id]['quantity'];
         }
@@ -142,6 +148,22 @@ class BookController extends Controller
         return redirect()->back()->with('toast_success','Book added to cart successfully!');
     }
     
+    public function editCart(Request $request, $id){
+        $book = Book::find($id);
+        $cart = session()->get('cart', []);
+        $quantity = $request->quantity;
+       
+        $cart[$id]=[
+            "title"=>$book->title,
+            "quantity"=>$quantity,
+            "author"=>$book->author,
+            "price"=>$book->price
+        ];
+    
+        session()->put('cart',$cart);
+    
+        return redirect()->back()->with('toast_success','Book added to cart successfully!');
+    }
 
     public function deleteCart(Request $request){
         $book_id = $request->input('book_id');
@@ -154,27 +176,8 @@ class BookController extends Controller
     }
 
     public function checkout(Request $request){
-        $cart = $request->session()->get('cart');
-        if (!$cart) {
-            return redirect()->back()->withErrors('Cart is empty!');
-        }
-        $totalPrice = 0;
-        foreach ($cart as $book) {
-            $totalPrice += $book['price'] * $book['quantity'];
-        }
-        $user = Auth::user(); // assuming you're using Laravel's built-in authentication
-        $transaction = new Transaction();
-        $transaction->user_id = $user->id;
-        $transaction->total_price = $totalPrice;
-        $transaction->save();
-        foreach ($cart as $book_id => $book) {
-            $transactionDetail = new TransactionDetail();
-            $transactionDetail->transaction_id = $transaction->id;
-            $transactionDetail->book_id = $book_id;
-            $transactionDetail->quantity = $book['quantity'];
-            $transactionDetail->save();
-        }
-        $request->session()->forget('cart');
+        
+        
         return redirect()->back()->with('toast_success','Checkout successful!');
     }
 

@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
@@ -123,6 +124,7 @@ class UserController extends Controller
             return back()->withErrors($validator);
         }
         $user->save();
+        Alert::success('Profile', 'has been updated');
         return redirect()->back();
     }
 
@@ -146,6 +148,7 @@ class UserController extends Controller
             return back()->withErrors($validator);
         }
         $user->save();
+        Alert::success('Profile', 'has been updated');
         return redirect()->back();
     }
 

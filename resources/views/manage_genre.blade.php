@@ -3,7 +3,7 @@
 @section('content')
     <div class="container border bg-white">
         <div class="row mt-4">
-            <h3>Insert Genre Form</h3>
+            <h3>Insert Types Form</h3>
         </div>
         <form action="/insert-genre" method="post" enctype="multipart/form-data">
         {{csrf_field()}}

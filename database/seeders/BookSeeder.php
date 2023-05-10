@@ -41,7 +41,7 @@ class BookSeeder extends Seeder
                 'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                  the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
                  scrambled it to make a type specimen book.',
-                'cover'=>'images/3.jpeg',
+                'cover'=>'images/ego.jpeg',
                 'price'=>'75000'
             ],
             [
@@ -113,6 +113,36 @@ class BookSeeder extends Seeder
                 scrambled it to make a type specimen book.',
                 'cover'=>'images/10.jpeg',
                 'price'=>'500000'
+            ],
+            [
+                'title'=>'Sarasa',
+                'genreid'=>'14',
+                'author'=> 'Zebra Club',
+                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+                scrambled it to make a type specimen book.',
+                'cover'=>'images/sarasa.jpeg',
+                'price'=>'20000'
+            ],
+            [
+                'title'=>'Caplet',
+                'genreid'=>'15',
+                'author'=> 'Pentel',
+                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+                scrambled it to make a type specimen book.',
+                'cover'=>'images/caplet.jpg',
+                'price'=>'15000'
+            ],
+            [
+                'title'=>'Eraser',
+                'genreid'=>'16',
+                'author'=> 'Joyko',
+                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+                scrambled it to make a type specimen book.',
+                'cover'=>'images/eraserjoyko.jpg',
+                'price'=>'5000'
             ]
         ]);
     }

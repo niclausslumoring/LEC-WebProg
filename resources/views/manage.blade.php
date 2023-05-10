@@ -4,7 +4,7 @@
     <div class= "p-3 border">
         <form action="/manage-book" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
-            <p class="fs-4">Insert Book Form</p>
+            <p class="fs-4">Insert Product Form</p>
             <div class="row mb-3">
                 <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Author</label>
+                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Brand</label>
                 <div class="col-sm-10">
                     <input class="form-control @error('author') is-invalid @enderror" type="text" aria-label="default input example" name="author">
                     <div class="row">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Synopsis</label>
+                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Description</label>
                 <div class="col-sm-10">
                     <textarea class="form-control @error('synopsis') is-invalid @enderror" id="exampleFormControlTextarea1" rows="10" name="synopsis"></textarea>
                     <div class="row">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Genre</label>
+                <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Type</label>
                 <div class="col-sm-9">
                     <div class="row">
                     @foreach ($genre as $gen)
@@ -86,9 +86,9 @@
             <thead>
             <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Author</th>
-                <th scope="col">Synopsis</th>
-                <th scope="col">Genre</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
                 <th scope="col">Price</th>
                 <th scope="col">Action</th>
             </tr>

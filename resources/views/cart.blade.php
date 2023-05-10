@@ -1,6 +1,19 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    @extends('layout')
 @section('pageTitle', 'Your Cart')
 @section('content')
+<form action="checkout-cart" >
     <div class="container">
         <div class="row mt-4">
             <p style="display:none">{{ $user = Auth::user(); }}</p>
@@ -70,6 +83,7 @@
             <h5>Grand Total: {{ $total }}</h5>
             <div class="row">
                 <div class="col-md-3">
+                    {{ csrf_field() }}
                     <button type="submit" class="btn btn-success">Checkout</button>
                 </div> 
             </div>
@@ -81,5 +95,8 @@
         @endif   
        
     </div> 
+</form>
     @include('sweetalert::alert')
 @endsection
+</body>
+</html>

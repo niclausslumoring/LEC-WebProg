@@ -7,6 +7,8 @@ use App\Models\Book;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
+
 class GenreController extends Controller
 {
     //
@@ -56,6 +58,7 @@ class GenreController extends Controller
             return back()->withErrors($validator);
         }
         $genre->save();
+        Alert::success('Type', 'has been updated');
         return redirect()->back();
     }
 }

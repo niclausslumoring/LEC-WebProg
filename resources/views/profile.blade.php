@@ -37,12 +37,12 @@
                 <button type="submit" class="btn btn-success">Update</button>
             </div>
             <div class="col-md-2">
-                <a href="{{ url('/change-password') }}">
-                    <button class="btn btn-success">Change Password</button>
+                <a href="/change-password">
+                    <button type="button" class="btn btn-success">Change Password</button>
                 </a>
             </div> 
-        </form>
         </div>
+    </form>
         <div class="row">
             <div class="col-md-10 py-2">
             </div> 
