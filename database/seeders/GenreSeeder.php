@@ -14,22 +14,11 @@ class GenreSeeder extends Seeder
     public function run()
     {
         DB::table('genres')->insert([
-            ['name'=>'Fantasy'],
-            ['name'=>'Mystery'],
-            ['name'=>'Romance'],
-            ['name'=>'Horror'],
-            ['name'=>'Thriller'],
-            ['name'=>'Crime'],
-            ['name'=>'Drama'],
-            ['name'=>'Action'],
-            ['name'=>'Fiction'],
-            ['name'=>'Science Fiction'],
-            ['name'=>'Young-adult'],
-            ['name'=>'Novel'],
-            ['name'=>'Poetry'],
-            ['name'=>'Pen'],
-            ['name'=>'Pencil'],
-            ['name'=>'Eraser'],
+            ['name'=>'Desk'],
+            ['name'=>'Table'],
+            ['name'=>'Lamp'],
+            ['name'=>'Chair'],
+            ['name'=>'Cabinet'],
         ]);
     }
 }

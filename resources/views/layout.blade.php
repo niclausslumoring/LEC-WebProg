@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@yield('pageTitle') | Book Store</title>
+    <title>@yield('pageTitle') | Furniture Store</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -85,7 +85,7 @@
         <div class="">
                 <p style="display:none">{{ $user = Auth::user(); }}</p>
                 <a href="/" style="text-decoration:none">
-                    <h1 class="navbar-header" style="color: black">Book Store</h1>
+                    <h1 class="navbar-header" style="color: black">Furniture Store</h1>
                 </a> 
         </div>
         <div class="">

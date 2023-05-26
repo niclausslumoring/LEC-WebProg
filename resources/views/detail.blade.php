@@ -30,28 +30,6 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Author</label>
-            <div class="col-sm-10">
-                <input class="form-control @error('author') is-invalid @enderror" type="text" aria-label="default input example" value="{{ $book->author}}" name="author">
-                <div class="row">
-                    <span style="color: red">@error('author')
-                        {{ 'Author is required' }}
-                    @enderror</span>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Synopsis</label>
-            <div class="col-sm-10">
-                <textarea class="form-control @error('synopsis') is-invalid @enderror" id="exampleFormControlTextarea1" rows="10" name="synopsis">{{ $book->synopsis}}</textarea>
-                <div class="row">
-                    <span style="color: red">@error('author')
-                        {{ 'Author is required' }}
-                    @enderror</span>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-3">
             <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Genre</label>
             <div class="col-sm-9">
                 <div class="row">
@@ -112,10 +90,6 @@
                 <p class="col-sm-6 ms-4">{{ $book->title }}</p>
             </div>
             <div class="row">
-                <p class="col-sm-3">Author</p>
-                <p class="col-sm-6 ms-4">{{ $book->author}}</p>
-            </div>
-            <div class="row">
                 <p class="col-sm-3">Synopsis</p>
                 <p class="col-sm-6 ms-4">{{ $book->synopsis}}</p>
             </div>
@@ -146,7 +120,7 @@
 @endif
 @else
 <div class= "p-3 border">
-    <p class="fs-4">{{ $book->title }}'s Book Detail</p>
+    <p class="fs-4">{{ $book->title }}'s Detail</p>
     <div class="row">
         <div class="col-sm-2 ms-4">
             <img src="{{\Illuminate\Support\Facades\Storage::url($book->cover)}}" alt=""style="width: 13rem; height: 18rem;">
@@ -155,10 +129,6 @@
             <div class="row">
                 <p class="col-sm-3">Name</p>
                 <p class="col-sm-6 ms-4">{{ $book->title }}</p>
-            </div>
-            <div class="row">
-                <p class="col-sm-3">Author</p>
-                <p class="col-sm-6 ms-4">{{ $book->author}}</p>
             </div>
             <div class="row">
                 <p class="col-sm-3">Synopsis</p>

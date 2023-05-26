@@ -176,8 +176,6 @@ class BookController extends Controller
     }
 
     public function checkout(Request $request){
-        
-        
         return redirect()->back()->with('toast_success','Checkout successful!');
     }
 

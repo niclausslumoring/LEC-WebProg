@@ -59,7 +59,7 @@
         .clear-button{
             /* width: 100px; */
         }
-    </style>
+    </style>    
 </head>
 <body>
 @extends('layout')
@@ -81,7 +81,6 @@
                     <div class="grid-item">
                         <img class="" src="{{\Illuminate\Support\Facades\Storage::url($b->cover)}}" alt="" style="width: 13rem; height: 15rem;">
                         <h6>{{ $b->title }}</h4>
-                            <p>{{ $b->author }}</p>
                             <p>{{ $b->price }}</p>
                         <div class="grid-item-info">
                             

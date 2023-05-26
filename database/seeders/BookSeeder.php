@@ -15,135 +15,41 @@ class BookSeeder extends Seeder
     {
         DB::table('books')->insert([
             [
-                'title'=>'Atomic Habbits',
+                'title'=>'Forsa',
                 'genreid'=>'3',
-                'author'=> 'James Clear',
                 'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                 the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                 the industry standard Fdummy text ever since the 1500s, when an unknown printer took a galley of type and
                   scrambled it to make a type specimen book.',
-                'cover'=>'images/1.jpeg',
+                'cover'=>'images/forza.jpg',
                 'price'=>'89000'
             ],
             [
-                'title'=>'The Art of Not Giving a Fuck',
+                'title'=>'Hauga',
                 'genreid'=>'3',
-                'author'=> 'Mark Manson',
                 'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
                 the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
                 scrambled it to make a type specimen book.',
-                'cover'=>'images/2.jpeg',
+                'cover'=>'images/hauga.jpg',
                 'price'=>'68000'
             ],
             [
-                'title'=>'Ego is the Enemy',
+                'title'=>'Langkapten',
                 'genreid'=>'3',
-                'author'=> 'Ryan Holiday',
                 'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                  the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
                  scrambled it to make a type specimen book.',
-                'cover'=>'images/ego.jpeg',
+                'cover'=>'images/langkapten.jpeg',
                 'price'=>'75000'
             ],
             [
-                'title'=>'You Do You',
-                'genreid'=>'3',
-                'author'=> 'Fellexandro Ruby',
+                'title'=>'Klippan',
+                'genreid'=>'4',
                 'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                  the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
                  scrambled it to make a type specimen book.',
-                'cover'=>'images/4.jpeg',
-                'price'=>'120000'
+                'cover'=>'images/klippan.jpg',
+                'price'=>'75000'
             ],
-            [
-                'title'=>'Dilan: 1990',
-                'genreid'=>'6',
-                'author'=> 'Pidi Baiq',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/5.jpeg',
-                'price'=>'79000'
-            ],
-            [
-                'title'=>'How to Influence Peaople and Friends',
-                'genreid'=>'7',
-                'author'=> 'Dale Carnagie',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/6.jpeg',
-                'price'=>'50000'
-            ],
-            [
-                'title'=>'The Intelligence Investor',
-                'genreid'=>'9',
-                'author'=> 'Warren Buffet',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys 
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
-                to make a type specimen book.',
-                'cover'=>'images/7.jpeg',
-                'price'=>'250000'
-            ],
-            [
-                'title'=>'Trading vs Investing',
-                'genreid'=>'3',
-                'author'=> 'Ryan Filbert',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                 the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                 scrambled it to make a type specimen book.',
-                'cover'=>'images/8.jpeg',
-                'price'=>'70000'
-            ],
-            [
-                'title'=>'The Art of Worship',
-                'genreid'=>'6',
-                'author'=> 'Juan Mogi',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                 scrambled it to make a type specimen book.',
-                'cover'=>'images/9.jpeg',
-                'price'=>'250000'
-            ],
-            [
-                'title'=>'Rich Dad Poor Dad',
-                'genreid'=>'7',
-                'author'=> 'Robert Kiyoshaki',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/10.jpeg',
-                'price'=>'500000'
-            ],
-            [
-                'title'=>'Sarasa',
-                'genreid'=>'14',
-                'author'=> 'Zebra Club',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/sarasa.jpeg',
-                'price'=>'20000'
-            ],
-            [
-                'title'=>'Caplet',
-                'genreid'=>'15',
-                'author'=> 'Pentel',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/caplet.jpg',
-                'price'=>'15000'
-            ],
-            [
-                'title'=>'Eraser',
-                'genreid'=>'16',
-                'author'=> 'Joyko',
-                'synopsis'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book.',
-                'cover'=>'images/eraserjoyko.jpg',
-                'price'=>'5000'
-            ]
         ]);
     }
 }
